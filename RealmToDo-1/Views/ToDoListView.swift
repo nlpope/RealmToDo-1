@@ -38,7 +38,8 @@ struct ToDoListView: View {
                 .padding()
                 List() {
                     ForEach(toDos) { toDo in
-                        Text(toDo.name)
+                        ToDoListRow(toDo: toDo)
+//                        Text(toDo.name)
                     }
                     .listRowSeparator(.hidden)
                 }
