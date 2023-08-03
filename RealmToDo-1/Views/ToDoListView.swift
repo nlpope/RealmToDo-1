@@ -8,6 +8,9 @@
 /**
  initial commit
  studying realm w stewart lynch
+ 
+ think the problem w the search filtering is in the private searchFilter's
+ declaration up top. Maybe it should be summat other than what it is
  */
 
 import SwiftUI
@@ -53,7 +56,8 @@ struct ToDoListView: View {
                 .listStyle(.plain)
                 .searchable(text: $searchFilter,
                             collection: $toDos,
-                            keyPath: \.name) {
+                            keyPath: \.name){
+                    //a bit confused here ???
                     ForEach(toDos) { toDo in
                         Text(toDo.name)
                             .searchCompletion(toDo.name)
