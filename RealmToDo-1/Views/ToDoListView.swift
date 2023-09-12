@@ -43,7 +43,7 @@ struct ToDoListView: View {
                 }
                 .padding()
                 List() {
-//                    ForEach(toDos.sorted(byKeyPath: "completed")) { toDo in
+                    //moved sorting to down here so we can animate the changes
                     ForEach(toDos.sorted(by: [
                         SortDescriptor(keyPath: "completed"),
                         SortDescriptor(keyPath: "urgency", ascending: false)
